@@ -1,0 +1,11 @@
+{
+  "name": "Sample",
+  "type": "div",
+  "props": {
+    "style": {
+      "color": "red",
+      "fontSize": "12px"
+    },
+    "children": ["Hello World"]
+  }
+}

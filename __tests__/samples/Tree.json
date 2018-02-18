@@ -1,0 +1,17 @@
+{
+  "name": "Sample",
+  "type": "div",
+  "props": {
+    "children": [
+      {
+        "name": "App",
+        "type": "p",
+        "props": {
+          "children": [
+            "Hello World"
+          ]
+        }
+      }
+    ]
+  }
+}

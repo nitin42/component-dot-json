@@ -1,0 +1,7 @@
+{
+  "name": "Sample",
+  "type": "div",
+  "props": {
+    "children": ["<h1 style='color: red; font-size: 10px;'>Hello World</h1>"]
+  }
+}

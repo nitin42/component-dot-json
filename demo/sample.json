@@ -1,0 +1,48 @@
+{
+	"name": "App",
+	"type": "div",
+	"props": {
+		"style": {
+			"color": "cyan",
+			"margin": "30px",
+			"padding": "20px"
+		},
+		"children": [
+			"Component-Dot-JSON",
+			"<button style='color: red; padding: 10px;'>Submit</button>",
+			"<div><a href='#'>Click</a></div>",
+			{
+				"name": "App",
+				"type": "h1",
+				"props": {
+					"style": {
+						"color": "cyan",
+						"margin": "30px",
+						"padding": "20px"
+					},
+					"children": [
+						"Component-Dot-JSON",
+						"<button style='color: red; padding: 10px;'>Submit</button>",
+						"<div><a href='#'>Click</a></div>"
+					]
+				}
+      },
+      {
+				"name": "App",
+				"type": "h1",
+				"props": {
+					"style": {
+						"color": "cyan",
+						"margin": "30px",
+						"padding": "20px"
+					},
+					"children": [
+						"Component-Dot-JSON",
+						"<button style='color: red; padding: 10px;'>Submit</button>",
+						"<div><a href='#'>Click</a></div>"
+					]
+				}
+			}
+		]
+	}
+}

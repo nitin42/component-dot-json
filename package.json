@@ -1,0 +1,27 @@
+{
+  "name": "component-dot-json",
+  "version": "1.0.0",
+  "description": "Create and mock React components UI using JSON",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "dependencies": {
+    "babel-jest": "^22.2.2",
+    "is-html": "^1.1.0",
+    "jest": "^22.3.0",
+    "react-html-parser": "^2.0.2",
+    "react-test-renderer": "^16.2.0"
+  },
+  "scripts": {
+    "start": "parcel demo/index.html",
+    "test:watch": "jest --watch",
+    "test": "jest"
+  }
+}

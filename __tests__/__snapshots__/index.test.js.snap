@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component-dot-json should parse the root element 1`] = `
+<div
+  style={
+    Object {
+      "color": "red",
+      "fontSize": "12px",
+    }
+  }
+>
+  Hello World
+</div>
+`;
+
+exports[`Component-dot-json should render a component as a child 1`] = `
+<div>
+  <p>
+    Hello World
+  </p>
+</div>
+`;
+
+exports[`Component-dot-json should render components, strings and html elements 1`] = `
+<div>
+  <div>
+    <div>
+      Hello
+    </div>
+  </div>
+  Hello World
+  <button>
+    Click
+  </button>
+  <div>
+    <p>
+      Hello
+    </p>
+  </div>
+  <div>
+    <div>
+      Hello
+    </div>
+  </div>
+  <div>
+    <div>
+      Hello
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Component-dot-json should render multiple components as children 1`] = `
+<div>
+  <div>
+    <div>
+      Hello
+    </div>
+  </div>
+  <div>
+    <div>
+      Hello
+    </div>
+  </div>
+  <div>
+    <div>
+      Hello
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Component-dot-json should render the html elements 1`] = `
+<div>
+  <h1
+    style={
+      Object {
+        "color": "red",
+        "fontSize": "10px",
+      }
+    }
+  >
+    Hello World
+  </h1>
+</div>
+`;
+
+exports[`Component-dot-json should render the nested html elements 1`] = `
+<div>
+  <h1
+    style={
+      Object {
+        "color": "red",
+        "fontSize": "10px",
+      }
+    }
+  >
+    <p
+      style={
+        Object {
+          "color": "mistyrose",
+          "fontSize": "20px",
+        }
+      }
+    >
+      Hello World
+    </p>
+  </h1>
+</div>
+`;
