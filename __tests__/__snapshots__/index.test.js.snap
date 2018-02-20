@@ -43,10 +43,27 @@ exports[`Component-dot-json should render components, strings and html elements 
     </div>
   </div>
   <div>
+    Header 
     <div>
       Hello
     </div>
   </div>
+</div>
+`;
+
+exports[`Component-dot-json should render custom react component 1`] = `
+<div>
+  Header 
+  <h1
+    style={
+      Object {
+        "color": "red",
+        "fontSize": "10px",
+      }
+    }
+  >
+    Hello World
+  </h1>
 </div>
 `;
 

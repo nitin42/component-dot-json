@@ -47,11 +47,11 @@ const traverse = (child) => recurseChildren(child)
 /**
  * @param {*} children Children array
  */
-const renderChildren = (children) => {
+const renderChildren = (children, components) => {
   return children.map(child => {
     if (typeof child === 'object') {
       // Use recursion to resolve the children again
-      return creator(child)
+      return creator(child, components)
     }
     
     return traverse(child)
@@ -71,10 +71,11 @@ const throwError = (where) => {
  * Resolves children array (if any) of the root element
  * @param {*} msg Corresponds to the component name, used in error reporting.
  * @param {*} props Component props
+ * @param {*} components Available components
  */
-const resolveChildren = (msg, props) => {
+const resolveChildren = (msg, props, components) => {
   return props.children && Array.isArray(props.children)
-  ? renderChildren(props.children)
+  ? renderChildren(props.children, components)
   : props.children && !Array.isArray(props.children) ? throwError(msg) : null
 }
 
@@ -83,20 +84,29 @@ const resolveChildren = (msg, props) => {
  * @param {*} name Component name
  * @param {*} type Element type
  * @param {*} props Component props
+ * @param {*} components Available components
  */
-const createReactElement = (name, type, props) => {
+const createReactElement = (name, type, props, components) => {
   key++
 
   return createElement(
     type,
     { ...props, key },
-    resolveChildren(name, props)
+    resolveChildren(name, props, components)
   )
 }
 
-export const creator = (schema) => {
+const getComponent = (type, components) => {
+  if(Object.keys(components).length > 0 && components[type]){
+    return components[type]
+  }
+  return type;
+}
+
+export const creator = (schema, components = {}) => {
   // Root element name, type and props
   const { name, type, props } = getData(schema)
+  const component = getComponent(type, components)
 
-  return createReactElement(name, type, props)
+  return createReactElement(name, component, props, components)
 }

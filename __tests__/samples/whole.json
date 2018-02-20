@@ -42,7 +42,7 @@
       },
       {
         "name": "Sample",
-        "type": "div",
+        "type": "Header",
         "props": {
           "children": [
             {

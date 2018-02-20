@@ -9,13 +9,20 @@ import nested from './samples/nested.json'
 import tree from './samples/Tree.json'
 import multiple from './samples/multiple.json'
 import whole from './samples/whole.json'
+import customComp from './samples/customComponent.json'
+
+const Header = (props) => <div>Header {props.children}</div>
+const components = {
+  Header
+}
 
 const RootComp = createComponent(root)
 const HtmlComp = createComponent(html)
 const NestedComp = createComponent(nested)
 const CompTree = createComponent(tree)
 const MultComp = createComponent(multiple)
-const WholeComp = createComponent(whole)
+const CustomComp = createComponent(customComp, components)
+const WholeComp = createComponent(whole, components)
 
 describe('Component-dot-json', () => {
   it('should parse the root element', () => {
@@ -50,6 +57,12 @@ describe('Component-dot-json', () => {
 
   it('should render components, strings and html elements', () => {
     const tree = renderer.create(<WholeComp />).toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
+
+  it('should render custom react component', () => {
+    const tree = renderer.create(<CustomComp />).toJSON();
 
     expect(tree).toMatchSnapshot()
   })
